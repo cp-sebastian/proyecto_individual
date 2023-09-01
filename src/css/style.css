@@ -49,6 +49,11 @@ body {
     cursor: pointer;
 }
 
+#menu li img{
+    vertical-align: middle; /* Alinea verticalmente la imagen con el texto */
+    margin-left: 10px;
+}
+
 .login{
     text-align: center;
     margin: 40px 0 25px 0;
