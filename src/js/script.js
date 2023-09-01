@@ -15,3 +15,8 @@ darkBackground.addEventListener('click', () => {
     menu.classList.remove('show');
     darkBackground.style.display = 'none';
 });
+
+btnClose.addEventListener('click', () => {
+    menu.classList.remove('show');
+    darkBackground.style.display = 'none';
+})
