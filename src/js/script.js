@@ -37,14 +37,17 @@ btnClose.addEventListener('click', () => {
 
 /*Al iniciar la página que ocurra estos eventos, al hacer click en una de las
 opciones del menú, se despliegue las opciones, caso contrario, se oculten */
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
+    /*Obteniendo todos los menu-item*/
     const menuItems = document.querySelectorAll('.menu-item');
-    menuItems.forEach(function (menuItem) {
-        const arrow = menuItem.querySelector('.flecha');
+    /*Seleccionando uno por uno*/
+    menuItems.forEach(menuItem => {
+        const flecha = menuItem.querySelector('.flecha');
         const submenu = menuItem.querySelector('.submenu');
-        menuItem.addEventListener('click', function () {
-            arrow.classList.toggle('up');
-            submenu.style.display = (arrow.classList.contains('up')) ? 'block' : 'none';
+        /*Aplicandole los event a cada menu-item */
+        menuItem.addEventListener('click', () => {
+            flecha.classList.toggle('up');
+            submenu.style.display = (flecha.classList.contains('up')) ? 'block' : 'none';
         });
     });
 });
