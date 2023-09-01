@@ -62,8 +62,9 @@ body {
     right: -50%;
 }
 
-.menu.show {
-    right: 0; /* Muestra el menú desplazándolo hacia la mitad derecha */
+/* Muestra el menú */
+#menu.show {
+    right: 0;
 }
 
 /*botón cerrar*/
