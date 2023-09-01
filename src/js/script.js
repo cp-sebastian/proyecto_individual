@@ -2,6 +2,8 @@ const btnMenu = document.getElementById('btn-menu');
 const btnClose = document.getElementById('btn-close');
 const menu = document.getElementById('menu');
 const darkBackground = document.getElementById('darkBackground');
+const allArrow = document.querySelectorAll('.flecha')
+const submenus = document.querySelectorAll('.submenu');
 /*Al presionar el bóton menu, muestra barra lateral y oscurecer el fondo */
 btnMenu.addEventListener('click', () => {
     menu.classList.add('show');
@@ -9,16 +11,28 @@ btnMenu.addEventListener('click', () => {
     btnClose.style.display = 'block';
 });
 
-/*Al hacer click en el fondo oscuro, oculta barra lateral y fondo oscuro */
+/*Al hacer click en el fondo oscuro, oculta barra lateral, fondo oscuro y resetear los submenus*/
 darkBackground.addEventListener('click', () => {
     menu.classList.remove('show');
     darkBackground.style.display = 'none';
+
+    // Cerrar todas las pestañas de flechas y establecer el toggle en falso
+    allArrow.forEach(arrow => arrow.classList.remove('up'));
+
+    // Ocultar todos los submenus
+    submenus.forEach(submenu => submenu.style.display = 'none');
 });
 
-/*Al hacer click en el boton 'X', oculta barra lateral y fondo oscuro */
+/*Al hacer click en el boton 'X', oculta barra lateral, fondo oscuro y resetear los submenus */
 btnClose.addEventListener('click', () => {
     menu.classList.remove('show');
     darkBackground.style.display = 'none';
+    
+    // Cerrar todas las pestañas de flechas y establecer el toggle en falso
+    allArrow.forEach(arrow => arrow.classList.remove('up'));
+
+    // Ocultar todos los submenus
+    submenus.forEach(submenu => submenu.style.display = 'none');
 })
 
 /*Al iniciar la página que ocurra estos eventos, al hacer click en una de las
