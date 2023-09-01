@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Configuración del navbar fondo, padding */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px 20px;
+}
+
+/* Tamaño del logo */
+.logo img {
+    width: 70px; 
+}
+
+/* Botón menú */
+.btn-menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Opciones del menú*/
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
