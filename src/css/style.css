@@ -54,7 +54,7 @@ body {
     position: fixed;
     background-color:hsl(0, 0%, 98%);
     height: 100%;
-    width: 50%;
+    width: 50%; /*Tamaño del menu desplegable*/
     top: 0;
     right: -100%;
     z-index: 2;
