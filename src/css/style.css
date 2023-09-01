@@ -30,7 +30,7 @@ body {
 /* Opciones del menú*/
 #menu ul {
     list-style: none;
-    margin: 70px 0px;
+    margin: -8px 0px;
     padding: 0;
 }
 
@@ -52,14 +52,13 @@ body {
 /*menu barra lateral*/
 #menu{
     position: fixed;
-    background-color: hsl(0, 0%, 98%);
+    background-color:hsl(0, 0%, 98%);
     height: 100%;
-    width: 150px;
+    width: 50%;
     top: 0;
     right: -100%;
     z-index: 2;
     transition: right 0.3s ease-in-out;
- 
 }
 
 /* Muestra el menú */
@@ -68,16 +67,14 @@ body {
 }
 
 /*botón cerrar*/
+.buttonClose{
+    display: flex;
+    justify-content: end;
+}
+
 #btn-close{
-    position: fixed;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    top: 0;
-    right: 0;
-    margin: 10px 10px;
-    z-index: 3;
-    display: none;
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
 
 /*Css para oscurecer la pantalla*/

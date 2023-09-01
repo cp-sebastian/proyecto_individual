@@ -1,4 +1,5 @@
 const btnMenu = document.getElementById('btn-menu');
+const btnClose = document.getElementById('btn-close')
 const menu = document.getElementById('menu');
 const darkBackground = document.getElementById('darkBackground')
 
@@ -6,6 +7,7 @@ const darkBackground = document.getElementById('darkBackground')
 btnMenu.addEventListener('click', () => {
     menu.classList.add('show');
     darkBackground.style.display = 'block';
+    btnClose.style.display = 'block';
 });
 
 /*Al hacer click en el fondo oscuro, ocultar barra lateral y fondo oscuro */
