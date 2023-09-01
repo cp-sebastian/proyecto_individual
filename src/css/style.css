@@ -28,29 +28,29 @@ body {
 }
 
 /* Opciones del menú*/
-.menu ul {
+#menu ul {
     list-style: none;
     margin: 70px 0px;
     padding: 0;
 }
 
-.menu li {
+#menu li {
     margin: 15px;
 }
 
-.menu a {
+#menu a {
     text-decoration: none;
     color: hsl(0, 0%, 8%);
 }
 
-.menu li button{
+#menu li button{
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
 /*menu barra lateral*/
-.menu{
+#menu{
     position: fixed;
     background-color: hsl(0, 0%, 98%);
     height: 100%;
@@ -60,6 +60,10 @@ body {
     z-index: 2;
     transition: right 0.3s ease-in-out;
     right: -50%;
+}
+
+.menu.show {
+    right: 0; /* Muestra el menú desplazándolo hacia la mitad derecha */
 }
 
 /*botón cerrar*/
