@@ -40,7 +40,7 @@ body {
 }
 
 #menu li:not(.register, .login) {
-    margin: 25px;
+    margin: 20px;
 }
 
 #menu a {
@@ -53,6 +53,11 @@ body {
 .flecha{
     vertical-align: middle;
     margin-left: 10px;
+}
+
+#submenu-1 img{
+    width: 12px;
+    margin-right: 5px;
 }
 
 /*Ocultando los submenus*/
@@ -69,12 +74,14 @@ body {
 .login{
     text-align: center;
     margin: 40px 0 25px 0;
+    cursor: pointer;
 }
 /*Estilo al "boton" register en el menu desplegable*/
 .register{
     display: block;
     text-align: center;
     border: 1px solid hsl(0, 0%, 41%);
+    cursor: pointer;
     border-radius: 10px;
     padding: 10px 20px;
     margin: 0 25px 0 25px;
