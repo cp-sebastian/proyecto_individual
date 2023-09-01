@@ -1,10 +1,16 @@
+/*Aplicandole el estilo de fuente y color de fondo*/
 body {
     font-family: 'Epilogue', sans-serif;
     margin: 0;
     padding: 0;
     background-color: hsl(0, 0%, 98%);
 }
-/*Esitlo NavBar*/
+
+
+/****************/
+/*ESTILO NAVEBAR*/
+/****************/
+
 /* Configuración del navbar fondo, padding */
 #navbar {
     display: flex;
@@ -16,10 +22,10 @@ body {
 
 /* Tamaño del logo */
 .logo img {
-    width: 80px; 
+    width: 90px; 
 }
 
-/* Botón menú y cerrar: quitar fondo y estilo*/
+/* Quitandole el fondo y el estilo de un boton*/
 #btn-menu,#menu li button{
     background-color: transparent;
     border: none;
@@ -43,28 +49,28 @@ body {
     font-size: 18px;
 }
 
-
-/*Imagen para el submenu*/
+/*Imagen de la flecha en los menus y alineando verticalmente la imagen con el texto*/
 .flecha{
-    vertical-align: middle; /* Alinea verticalmente la imagen con el texto */
+    vertical-align: middle;
     margin-left: 10px;
 }
 
-/*submenu*/
+/*Ocultando los submenus*/
 .submenu{
     display: none;
 }
-/*Usarlo cuando presionen para abri el submenu*/
+
+/*Para cambiar la imagen de la flecha hacia abajo con la de arriba con el .js*/
 .flecha.up{
     content: url('../images/icon-arrow-up.svg');
 }
 
-/*Opcion del menu: login*/
+/*Estilo al "boton" login en el menu desplegable*/
 .login{
     text-align: center;
     margin: 40px 0 25px 0;
 }
-/*Opcion del menu: register*/
+/*Estilo al "boton" register en el menu desplegable*/
 .register{
     display: block;
     text-align: center;
@@ -74,8 +80,7 @@ body {
     margin: 0 25px 0 25px;
 }
 
-
-/*menu barra lateral*/
+/*Estilo y animación de la barra lateral al presionar el botón menú*/
 #menu{
     position: fixed;
     background-color:hsl(0, 0%, 98%);
@@ -87,23 +92,24 @@ body {
     transition: right 0.3s ease-in-out;
 }
 
-/* Muestra el menú */
+/*Hacer que se muestre pegado al lado derecho de la pantalla*/
 #menu.show {
     right: 0;
 }
 
-/*botón cerrar*/
+/*Botón cerrar "x"*/
 /*div cerrar: para alinear el boton cerrar al costado*/
 .buttonClose{
     display: flex;
     justify-content: end;
 }
+
 /*button cerrar: darle más espaciado con respecto a los items*/
 #btn-close{
     margin-bottom: 15px;
 }
 
-/*Css para oscurecer la pantalla*/
+/*CSS para oscurecer la pantalla al abrir el menú*/
 #darkBackground {
     display: none;
     position: fixed;
@@ -115,7 +121,11 @@ body {
     z-index: 1;
 }
 
-/*ESTILO MAIN */
+
+/****************/
+/*ESTILO MAIN*/
+/****************/
+
 /*Contenido general*/
 .content{
     margin-bottom: 30px;
@@ -124,10 +134,12 @@ body {
     justify-content: center;
     align-items: center;
 }
-/*Estilo imagen*/
-.imgpub{
+
+/*Estilo de la imagen principal*/
+.imagenPrincipal{
     width: 100%;
 }
+
 /*Título de la página*/
 h1 {
     font-size: 36px;
@@ -135,6 +147,7 @@ h1 {
     text-align: center;
     font-weight: 700;
 }
+
 /*Parrafo*/
 p {
     font-size: 16px;
@@ -145,7 +158,8 @@ p {
     line-height: 1.5;
     color: hsl(0, 0%, 41%);
 }
-/*Bóton con fondo negro*/
+
+/*Conviertiendo un enlazador 'a' a un botón*/
 .btn-moreContent {
     display: inline-block;
     padding: 15px 20px;
@@ -156,18 +170,21 @@ p {
     font-size: 18px;
     margin: 10px 0 50px 0;
 }
-/*Linea de auspiciadores*/
+
+/*Estilo a los auspiciadores poniendolos en fila*/
 .auspiciadores{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
 }
-/*tamaño del espacio a ocupar las imagenes auspiciadoras*/
+
+/*Tamaño del espacio a ocupar las imagenes auspiciadoras*/
 .auspiciadores div{
     width: 20%;
 }
-/*tamaño imagen*/
+
+/*Tamaño imagen*/
 .auspiciadores img{
     width: 100%;
 }
