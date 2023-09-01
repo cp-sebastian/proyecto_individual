@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Epilogue', sans-serif;
     margin: 0;
     padding: 0;
     background-color: hsl(0, 0%, 98%);
@@ -88,52 +88,59 @@ body {
     z-index: 1;
 }
 
-/*Esitlo main*/
+/*ESTILO MAIN */
+/*Contenido general*/
 .content{
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+/*Estilo imagen*/
 .imgpub{
     width: 100%;
 }
-
+/*Título de la página*/
 h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 36px;
+    margin: 50px 5px 0 5px;
     text-align: center;
+    font-weight: 700;
 }
-
+/*Parrafo*/
 p {
     font-size: 16px;
     margin-bottom: 20px;
     padding: 0 20px;
     text-align: center;
     font-size: 18px;
-    font-weight: 500;
+    line-height: 1.5;
     color: hsl(0, 0%, 41%);
 }
-
+/*Bóton con fondo negro*/
 .btn-moreContent {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 15px 20px;
     background-color: hsl(0, 0%, 8%);
     color: hsl(0, 0%, 98%);
     border-radius: 15px;
     text-decoration: none;
     font-size: 18px;
-    margin-bottom: 30px;
+    margin: 10px 0 50px 0;
 }
-
+/*Linea de auspiciadores*/
 .auspiciadores{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
 }
-
+/*tamaño del espacio a ocupar las imagenes auspiciadoras*/
 .auspiciadores div{
     width: 20%;
 }
-
+/*tamaño imagen*/
 .auspiciadores img{
     width: 100%;
 }
