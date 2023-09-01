@@ -33,13 +33,14 @@ body {
     padding: 0;
 }
 
-#menu li {
-    margin: 15px;
+#menu li:not(.register, .login) {
+    margin: 25px;
 }
 
 #menu a {
     text-decoration: none;
-    color: hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 41%);
+    font-size: 18px;
 }
 
 #menu li button{
@@ -48,12 +49,27 @@ body {
     cursor: pointer;
 }
 
+.login{
+    text-align: center;
+    margin: 40px 0 25px 0;
+}
+
+.register{
+    display: block;
+    text-align: center;
+    border: 1px solid hsl(0, 0%, 41%);
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 0 25px 0 25px;
+}
+
+
 /*menu barra lateral*/
 #menu{
     position: fixed;
     background-color:hsl(0, 0%, 98%);
     height: 100%;
-    width: 50%; /*Tamaño del menu desplegable*/
+    width: 60%; /*Tamaño del menu desplegable*/
     top: 0;
     right: -100%;
     z-index: 2;
