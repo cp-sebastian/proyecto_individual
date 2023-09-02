@@ -41,7 +41,7 @@ body {
 
 /*Ajustando icons*/
 #menu li:not(.register, .login) {
-    margin: 25px 10px;
+    margin: 25px 0 25px 12px;
 }
 
 #menu a {
@@ -93,7 +93,7 @@ body {
     position: fixed;
     background-color:hsl(0, 0%, 98%);
     height: 100%;
-    width: 60%; /*Tamaño del menu desplegable*/
+    width: 68%; /*Tamaño del menu desplegable*/
     top: 0;
     right: -100%;
     z-index: 2;
@@ -167,7 +167,7 @@ p {
     color: hsl(0, 0%, 41%);
 }
 
-/*Conviertiendo un enlazador 'a' a un botón*/
+/*Conviertiendo un enlazador 'a' a un botón en el bóton "Learn More"*/
 .btn-moreContent {
     display: inline-block;
     padding: 15px 20px;
