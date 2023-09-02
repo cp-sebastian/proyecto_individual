@@ -221,23 +221,22 @@ p {
     /****************/
     /*ESTILO NAVEBAR*/
     /****************/
+
+    /*Quitar navbar celular*/
     #navbar{
         display: none;
     }
 
+    /*Mostrar navbar escritorio*/
     #navbar-Escritorio{
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 20px;
     }
-    
-/*    .navigation {
-        display: flex;
-        align-items: center;
-    }*/
 
-    .group-1{
+    /*Ordenando las filas*/
+    .group-1,.group-2{
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -249,29 +248,92 @@ p {
         list-style: none;
         margin: 0;
         padding: 0;
-        display: flex; /* Mostrar las opciones de navegación en línea */
+        display: flex;
     }
 
-    .group-1 ul li,
-    .group-2 ul li {
-        margin-left: 60px; /* Espacio entre las opciones */
+    /* Espacio entre las opciones */
+    .group-1 ul li:not(.submenu *){
+        margin-left: 60px; 
         margin-bottom: 10px;
     }
 
+    .group-2 ul li{
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+    /* Eliminar el espacio después de la última opción de navegación en el
+     grupo 2 */
     .group-2 ul li:last-child {
-        margin-right: 0; /* Eliminar el espacio después de la última opción de navegación en el grupo 2 */
+        margin-right: 0; 
     }
 
+    /*Igualando el boton login al boton register*/
+    .loginDesk{
+        padding: 10px 20px;
+    }
+
+    /*Limpiando decoraciones de los enlaces*/
     #navbar-Escritorio a {
         text-decoration: none;
-        color: hsl(0, 0%, 8%);
+        color: hsl(0, 0%, 41%);
         font-weight: 500;
     }
 
+    #navbar-Escritorio a:hover {
+        color: hsl(0, 0%, 8%);
+    }
 
+    /* Estilos para los cuadros de submenu */
+    .submenu {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        margin: 0 0 0 0px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 1; /* Para que estén sobre otros elementos */
+    }
 
+    .vacioEntreTitulos{
+        padding-top: 20px;
+    }
+
+    #submenu1 {
+        margin: 0px 0 0 -35px;
+    }
+
+    .conSubmenu:hover .submenu,
+    .vacioEntreTitulos:hover{
+        display: block;
+    }
+
+    .conSubmenu:hover .flecha {
+        background-image: url('src/images/icon-arrow-hover.svg'); /* Cambiar la imagen de fondo en hover */
+    }
+    
+    /* Estilos para los enlaces de navegación cuando no están en hover */
+    .conSubmenu .flecha {
+        background-image: url('src/images/icon-arrow-down.svg'); /* Imagen de fondo por defecto */
+    }
+
+    .submenu ul{
+        display: flex;
+        flex-direction: column;
+        margin: 5px 10px 10px 10px;
+    }
+
+    .submenu ul li{
+        margin-top: 15px;
+    }
+
+    /****************/
+    /*ESTILO MAIN*/
+    /****************/
+    /*Cambiar de color al poner el mouse encima*/
     .btn-moreContent:hover{
         background-color: hsl(0, 0%, 98%);
-        color: hsl(0, 0%, 8%);;
+        color: hsl(0, 0%, 8%);
     }
 }
