@@ -232,7 +232,7 @@ p {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 20px;
+        padding: 3px 20px 20px 20px;
     }
 
     /*Ordenando las filas*/
@@ -243,6 +243,12 @@ p {
         align-items: center;
     }
 
+    /*Agregando magen superior para igualar con el de celular*/
+    .opciones-group-1{
+        margin-top: 20px;
+    }
+
+    /*Quitandole el estilo*/
     .group-1 ul,
     .group-2 ul {
         list-style: none;
@@ -251,16 +257,18 @@ p {
         display: flex;
     }
 
-    /* Espacio entre las opciones */
+    /* Espacio entre las opciones menos con los decendientes */
     .group-1 ul li:not(.submenu *){
         margin-left: 60px; 
         margin-bottom: 10px;
     }
 
+    /* Espacio entre las opciones*/
     .group-2 ul li{
         margin-left: 20px;
         margin-bottom: 10px;
     }
+
     /* Eliminar el espacio después de la última opción de navegación en el
      grupo 2 */
     .group-2 ul li:last-child {
@@ -279,6 +287,8 @@ p {
         font-weight: 500;
     }
 
+    /*Agregandole cambio de color al pasar por las opciones
+    del navbar*/
     #navbar-Escritorio a:hover {
         color: hsl(0, 0%, 8%);
     }
@@ -296,34 +306,37 @@ p {
         z-index: 1; /* Para que estén sobre otros elementos */
     }
 
+    /*Para que la función hover siga funcionando, aun con la 
+    separacion entre submenu y opcion del navbar*/
     .vacioEntreTitulos{
         padding-top: 20px;
     }
 
+    /*Moviendo el submenu*/
     #submenu1 {
         margin: 0px 0 0 -35px;
     }
 
-    .conSubmenu:hover .submenu,
+    /*Poniendo un hover sobre las opciones para que se active
+    el submenu mientras el mouse está sobre ello*/
+    .conSubmenu:hover  .submenu,
     .vacioEntreTitulos:hover{
         display: block;
     }
 
+    /*La imagen flecha mientras el mouse este encima del submenu*/
     .conSubmenu:hover .flecha {
-        background-image: url('src/images/icon-arrow-hover.svg'); /* Cambiar la imagen de fondo en hover */
+        content:url('../images/icon-arrow-up.svg');
     }
     
-    /* Estilos para los enlaces de navegación cuando no están en hover */
-    .conSubmenu .flecha {
-        background-image: url('src/images/icon-arrow-down.svg'); /* Imagen de fondo por defecto */
-    }
-
+    /*Ordenando en columna el submenu*/
     .submenu ul{
         display: flex;
         flex-direction: column;
         margin: 5px 10px 10px 10px;
     }
 
+    /*Separando las opciones del submenu*/
     .submenu ul li{
         margin-top: 15px;
     }
@@ -331,6 +344,26 @@ p {
     /****************/
     /*ESTILO MAIN*/
     /****************/
+
+    #main-content{
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
+        gap: 20px; /* Espacio entre las columnas */
+        grid-template-areas: "izquierda" "derecha" ;
+        margin-top: 30px;
+    }
+
+    .content{
+        grid-area: izquierda;
+    }
+
+    .imagenPrincipal{
+        content:url('../images/image-hero-desktop.png');
+        width: auto;
+        height: 100hv;
+    }
+
+    
     /*Cambiar de color al poner el mouse encima*/
     .btn-moreContent:hover{
         background-color: hsl(0, 0%, 98%);
