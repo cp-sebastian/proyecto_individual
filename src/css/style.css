@@ -40,13 +40,13 @@ body {
 }
 
 #menu li:not(.register, .login) {
-    margin: 20px;
+    margin: 25px 10px;
 }
 
 #menu a {
     text-decoration: none;
     color: hsl(0, 0%, 41%);
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 /*Imagen de la flecha en los menus y alineando verticalmente la imagen con el texto*/
