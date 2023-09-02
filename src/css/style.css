@@ -210,14 +210,14 @@ p {
 }
 
 /*Tablet*/
-@media (min-width: 501px) and (max-width:1023px) {
+@media (min-width: 501px) and (max-width:1009px) {
     .btn-moreContent:hover{
         background-color: hsl(0, 0%, 98%);
         color: hsl(0, 0%, 8%);
     }
 }
 /*PC*/
-@media (min-width: 1024px){
+@media (min-width: 1010px){
     /****************/
     /*ESTILO NAVEBAR*/
     /****************/
@@ -345,28 +345,58 @@ p {
     /*ESTILO MAIN*/
     /****************/
 
+    /*Convirtiendo el contenido en dos columnas*/
     #main-content{
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
-        gap: 20px; /* Espacio entre las columnas */
+        grid-template-columns: 1fr 1fr;
         grid-template-areas: "izquierda" "derecha" ;
-        margin-top: 30px;
+        margin-top: 0px;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        justify-items: center;
     }
 
+    /*Invirtiendo las columnas y alineandolos*/
     .content{
         grid-area: izquierda;
+        padding-left: 70px;
+        align-items: flex-start;
     }
 
+    /*Creciendo el tamaño del texto y pegandolo al inicio*/
+    h1{
+        margin-left: 0;
+        font-size: 70px;
+        text-align: start;
+    }
+
+    /*Modificando parrafo*/
+    p{
+        margin-bottom: 20px;
+        padding: 0px;
+        text-align: start;
+        font-size: 18px;
+        line-height: 1.5;
+        color: hsl(0, 0%, 41%); 
+    }
+
+    /*Cambiando la imagen de celular por la de desktop*/
     .imagenPrincipal{
         content:url('../images/image-hero-desktop.png');
-        width: auto;
-        height: 100hv;
+        width: 55%;
+        text-align: center;
     }
 
-    
     /*Cambiar de color al poner el mouse encima*/
     .btn-moreContent:hover{
         background-color: hsl(0, 0%, 98%);
         color: hsl(0, 0%, 8%);
     }
+
+    .auspiciadores{
+        width: 90%;
+    }
+
+
 }
