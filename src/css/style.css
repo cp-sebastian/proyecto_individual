@@ -20,6 +20,10 @@ body {
     padding: 20px 20px;
 }
 
+#navbar-Escritorio{
+    display: none;
+}
+
 /* Tamaño del logo */
 .logo img {
     width: 90px; 
@@ -173,6 +177,7 @@ p {
     padding: 15px 20px;
     background-color: hsl(0, 0%, 8%);
     color: hsl(0, 0%, 98%);
+    border: 1px solid hsl(0, 0%, 8%);
     border-radius: 15px;
     text-decoration: none;
     font-size: 18px;
@@ -195,4 +200,78 @@ p {
 /*Tamaño imagen*/
 .auspiciadores img{
     width: 100%;
+}
+
+
+/*RESPONSIVE*/
+/*Celular*/
+@media (max-width: 500px) {
+
+}
+
+/*Tablet*/
+@media (min-width: 501px) and (max-width:1023px) {
+    .btn-moreContent:hover{
+        background-color: hsl(0, 0%, 98%);
+        color: hsl(0, 0%, 8%);
+    }
+}
+/*PC*/
+@media (min-width: 1024px){
+    /****************/
+    /*ESTILO NAVEBAR*/
+    /****************/
+    #navbar{
+        display: none;
+    }
+
+    #navbar-Escritorio{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+    
+/*    .navigation {
+        display: flex;
+        align-items: center;
+    }*/
+
+    .group-1{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .group-1 ul,
+    .group-2 ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex; /* Mostrar las opciones de navegación en línea */
+    }
+
+    .group-1 ul li,
+    .group-2 ul li {
+        margin-left: 60px; /* Espacio entre las opciones */
+        margin-bottom: 10px;
+    }
+
+    .group-2 ul li:last-child {
+        margin-right: 0; /* Eliminar el espacio después de la última opción de navegación en el grupo 2 */
+    }
+
+    #navbar-Escritorio a {
+        text-decoration: none;
+        color: hsl(0, 0%, 8%);
+        font-weight: 500;
+    }
+
+
+
+    .btn-moreContent:hover{
+        background-color: hsl(0, 0%, 98%);
+        color: hsl(0, 0%, 8%);;
+    }
 }
