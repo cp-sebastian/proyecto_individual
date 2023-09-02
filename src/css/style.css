@@ -39,6 +39,7 @@ body {
     padding: 0;
 }
 
+/*Ajustando icons*/
 #menu li:not(.register, .login) {
     margin: 25px 10px;
 }
